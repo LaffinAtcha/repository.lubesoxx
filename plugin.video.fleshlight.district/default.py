@@ -21,7 +21,7 @@ import __builtin__
 # CONFIGURATION VARIABLES
 # -----------------------
 # change these to suit your addons
-root_xml_url = "https://raw.githubusercontent.com/LaffinAtcha/repository.lubesoxx/tree/master/xml/main.xml"  # url of the root xml file
+root_xml_url = "https://raw.githubusercontent.com/LaffinAtcha/repository.lubesoxx/master/xml/main.xml"  # url of the root xml file
 __builtin__.tvdb_api_key = "BOB2F5655863A077"  # tvdb api key
 __builtin__.tmdb_api_key = "445de55a49ed432d1846bca86801b625"  # tmdb api key
 __builtin__.trakt_client_id = "00f654ec74b92deeaa3184d83296107f36e10738ca028407bfda595f026b1228"  # trakt client id
