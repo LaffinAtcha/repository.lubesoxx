@@ -9,7 +9,7 @@
 </plugin>
 
 <dir>
-     <name>Quick Fix (mixed content under 10 minutes)</name>
+     <name>Page 1 (Work in progress)</name>
      <link>https://raw.githubusercontent.com/LaffinAtcha/repository.lubesoxx/master/xml/qro.xml</link>
      <animated_thumbnail></animated_thumbnail>
      <thumbnail></thumbnail>
@@ -18,7 +18,7 @@
 </dir>
 
 <dir>
-     <name>10+ Minutes</name>
+     <name>Page 2 ( Work in Progress) </name>
      <link>https://raw.githubusercontent.com/LaffinAtcha/repository.lubesoxx/master/xml/xx2.xml</link>
      <animated_thumbnail></animated_thumbnail>
      <thumbnail></thumbnail>
