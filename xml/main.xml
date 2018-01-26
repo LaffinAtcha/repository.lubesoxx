@@ -1,15 +1,17 @@
 ###Main.xml###
-
+<dir>
+     <name>Welcome to LaffinAtcha's [COLOR red][B]Fleshlight District[/COLOR][/B] Enjoy yourself just clean up when you're done!</name>
+</dir>     
 
 
 <plugin>
-<name>FleshLight District Settings (Authorize RD Here)</name>
+<name>[COLOR gold]FleshLight District Settings[/COLOR] (Authorize RD Here)</name>
 <link>plugin://plugin.video.flshlight.district/?action=openSettings</link>
 <thumbnail></thumbnail>
 </plugin>
 
 <dir>
-     <name>[COLOR limegrean][B]Quick Flix[/COLOR][/B](Streamcherry)(NonRD)</name>
+     <name>[COLOR limegreen][B]Quick Flix[/COLOR][/B](Streamcherry)(NonRD)</name>
      <link>https://raw.githubusercontent.com/LaffinAtcha/repository.lubesoxx/master/xml/qro.xml</link>
      <animated_thumbnail></animated_thumbnail>
      <thumbnail></thumbnail>
@@ -18,7 +20,7 @@
 </dir>
 
 <dir>
-     <name>[COLOR limegrean][B]Fap Attack[/COLOR][/B](Streamcherry)(NonRD)</name>
+     <name>[COLOR limegreen][B]Fap Attack[/COLOR][/B](Streamcherry)(NonRD)</name>
      <link>https://raw.githubusercontent.com/LaffinAtcha/repository.lubesoxx/master/xml/xx2.xml</link>
      <animated_thumbnail></animated_thumbnail>
      <thumbnail></thumbnail>
