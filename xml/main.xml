@@ -9,7 +9,7 @@
 </plugin>
 
 <dir>
-     <name>Page 1 (Work in progress)</name>
+     <name>[COLOR limegrean][B]Quick Flix[/COLOR][/B](Streamcherry)(NonRD)</name>
      <link>https://raw.githubusercontent.com/LaffinAtcha/repository.lubesoxx/master/xml/qro.xml</link>
      <animated_thumbnail></animated_thumbnail>
      <thumbnail></thumbnail>
@@ -18,7 +18,7 @@
 </dir>
 
 <dir>
-     <name>Page 2 ( Work in Progress) </name>
+     <name>[COLOR limegrean][B]Fap Attack[/COLOR][/B](Streamcherry)(NonRD)</name>
      <link>https://raw.githubusercontent.com/LaffinAtcha/repository.lubesoxx/master/xml/xx2.xml</link>
      <animated_thumbnail></animated_thumbnail>
      <thumbnail></thumbnail>
@@ -35,20 +35,3 @@
      <fanart></fanart>
 </dir>
 
-<dir>
-     <name>Empty</name>
-     <link></link>
-     <animated_thumbnail></animated_thumbnail>
-     <thumbnail></thumbnail>
-     <animated_fanart></animated_fanart>
-     <fanart></fanart>
-</dir>
-
-<dir>
-     <name>Empty</name>
-     <link></link>
-     <animated_thumbnail></animated_thumbnail>
-     <thumbnail></thumbnail>
-     <animated_fanart></animated_fanart>
-     <fanart></fanart>
-</dir>
