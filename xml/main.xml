@@ -50,12 +50,6 @@
      <fanart></fanart>
 </dir>
 
-<plugin>
-<name>[COLOR gold]FleshLight District Settings[/COLOR] (Authorize RD Here)</name>
-<link>plugin://plugin.video.flshlight.district/?action=openSettings</link>
-<thumbnail></thumbnail>
-</plugin>
-
 <dir>
      <name>[B]XXX Outtakes n Bloopers[/B](coming soon)</name>
      <link>https://raw.githubusercontent.com/LaffinAtcha/repository.lubesoxx/master/xml/bloopers.xml</link>
@@ -64,3 +58,11 @@
      <animated_fanart></animated_fanart>
      <fanart></fanart>
 </dir>
+
+<plugin>
+<name>[COLOR gold]FleshLight District Settings[/COLOR] (Authorize RD Here)</name>
+<link>plugin://plugin.video.flshlight.district/?action=openSettings</link>
+<thumbnail></thumbnail>
+</plugin>
+
+
