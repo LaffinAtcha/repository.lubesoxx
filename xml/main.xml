@@ -105,9 +105,17 @@
 </dir>
 
 <plugin>
-<name>[COLOR gold]FleshLight District Settings[/COLOR] (Authorize RD Here)</name>
+<name>[COLOR gold]FleshLight District Settings[/COLOR]</name>
 <link>plugin://plugin.video.flshlight.district/?action=openSettings</link>
 <thumbnail></thumbnail>
 </plugin>
+
+	<plugin>
+<name>[COLOR gold](Re)Authorized Real-Debrid[/COLOR]</name>
+<link>plugin://script.module.resolveurl/?mode=auth_rd</link>
+<thumbnail>http://koditips.com/wp-content/uploads/real-debrid-addon.png</thumbnail>
+<fanart></fanart>
+</plugin>
+
 
 
