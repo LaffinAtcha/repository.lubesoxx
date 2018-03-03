@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
     default.py --- Jen Addon entry point
-    Copyright (C) 2017, Midraal
+    Copyright (C) 2017,
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -22,7 +22,7 @@ import __builtin__
 # -----------------------
 # change these to suit your addons
 root_xml_url = "https://raw.githubusercontent.com/LaffinAtcha/repository.lubesoxx/master/xml/main.xml"  # url of the root xml file
-__builtin__.tvdb_api_key = "# tvdb api key
+__builtin__.tvdb_api_key = ""  # tvdb api key
 __builtin__.tmdb_api_key = ""  # tmdb api key
 __builtin__.trakt_client_id = ""  # trakt client id
 __builtin__.trakt_client_secret = ""  # trakt client secret
