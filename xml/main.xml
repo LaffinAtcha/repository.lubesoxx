@@ -117,5 +117,11 @@
 <fanart></fanart>
 </plugin>
 
-
+    <dir>
+    <title>New Test</title>
+    <thumbnail></thumbnail>
+    <m3u>https://openload.co/f/pouHfeVN1Ag/test.m3u</m3u>
+    <fanart></fanart>
+    <info> </info>
+    </dir>
 
