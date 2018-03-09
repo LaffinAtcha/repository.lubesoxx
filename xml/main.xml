@@ -12,9 +12,6 @@
      <fanart></fanart>
 </dir>
 
-
-
-
 <dir>
      <name>[COLOR limegreen][B]Quick Flix[/COLOR][/B](Streamcherry)(NonRD)</name>
      <link>https://raw.githubusercontent.com/LaffinAtcha/repository.lubesoxx/master/xml/qro.xml</link>
@@ -36,6 +33,15 @@
 <dir>
      <name>[COLOR limegreen][B]Full Length XXX[/COLOR][/B] (Openload)(RD recommended)</name>
      <link>https://raw.githubusercontent.com/LaffinAtcha/repository.lubesoxx/master/xml/ol1.xml</link>
+     <animated_thumbnail></animated_thumbnail>
+     <thumbnail></thumbnail>
+     <animated_fanart></animated_fanart>
+     <fanart></fanart>
+</dir>
+
+<dir>
+     <name>[COLOR blue][B]NEW! More Full Length XXX[/COLOR][/B] (Openload)(RD recommended)</name>
+     <link>https://raw.githubusercontent.com/LaffinAtcha/repository.lubesoxx/master/xml/opl.xml</link>
      <animated_thumbnail></animated_thumbnail>
      <thumbnail></thumbnail>
      <animated_fanart></animated_fanart>
