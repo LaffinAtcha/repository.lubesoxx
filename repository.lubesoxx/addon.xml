@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.lubesoxx" name="LubeSoxx" version="0.0.1" provider-name="LaffinAtcha">
+<addon id="repository.lubesoxx" name="[COLOR hotpink][B]LubeSoxx[/COLOR][/B]" version="0.0.2" provider-name="[COLOR limegreen][I]LaffinAtcha[/COLOR][I]">
 	<extension point="xbmc.addon.repository" name="LubeSoxx Repository">
-		<dir>
-			<info compressed="false">https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/</datadir>
-		</dir>
+	<dir>
+        <info compressed="false">http://teamuniversal.xyz/modules4all/addons.xml</info>
+        <checksum>http://teamuniversal.xyz/modules4all/addons.xml.md5</checksum>
+        <datadir zip="true">http://teamuniversal.xyz/modules4all/</datadir>
+     </dir>
+    <dir>
+      <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+    </dir>
 		<info compressed="false">https://raw.githubusercontent.com/LaffinAtcha/repository.lubesoxx/master/zips/addons.xml</info>
 		<checksum>https://raw.githubusercontent.com/LaffinAtcha/repository.lubesoxx/master/zips/addons.xml.md5</checksum>
 		<datadir zip="true">https://raw.githubusercontent.com/LaffinAtcha/repository.lubesoxx/master/zips/</datadir>

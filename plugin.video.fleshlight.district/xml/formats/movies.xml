@@ -43,7 +43,4 @@
   <tmdb>collection/10</tmdb>
 </dir>
 
-<dir>
-  <title>Griff True Movies</title>
-  <trakt>https://api.trakt.tv/users/documentaryrepo/lists/true-movies/items</trakt>
-</dir>
+

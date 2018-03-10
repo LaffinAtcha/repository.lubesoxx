@@ -10,23 +10,8 @@
   </dir>
 
 <dir>
-    <title>Chicks</title>
-    <link>file://shared lists/chicks.xml</link>
-  </dir>
-
-<dir>
-    <title>Collections</title>
-    <link>file://shared lists/collections.xml</link>
-  </dir>
-
-<dir>
     <title>Concerts</title>
     <link>file://shared lists/concerts.xml</link>
-  </dir>
-
-<dir>
-    <title>Kids</title>
-    <link>file://shared lists/kids.xml</link>
   </dir>
 
 <dir>

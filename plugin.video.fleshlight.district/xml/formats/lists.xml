@@ -28,10 +28,4 @@
   <tmdb>list/32947</tmdb>
 </dir>
 
-<dir>
-  <title>Car Shows TRAKT</title>
-  <trakt>https://api.trakt.tv/users/documentaryrepo/lists/fg-car-shows/items</trakt>
-  <thumbnail>http://i.imgur.com/pVRZGMj.png</thumbnail>
-  <fanart>http://i.imgur.com/FJDZ13h.png</fanart>
-  <content></content>
-</dir>
+

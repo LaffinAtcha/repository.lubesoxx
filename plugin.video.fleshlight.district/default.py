@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
     default.py --- Jen Addon entry point
-    Copyright (C) 2017,
+    Copyright (C) 2017, Jen
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -28,11 +28,14 @@ __builtin__.trakt_client_id = "00f654ec74b92deeaa3184d83296107f36e10738ca028407b
 __builtin__.trakt_client_secret = "fa2320769ad374bf7a29916e4e87a11d8a4253b13a4bdec0528b651b66738279"  # trakt client secret
 __builtin__.search_db_location = ""  # location of search db
 
+
 import os
 import sys
 
 import koding
 import koding.router as router
+from resources.lib.installa import Dialog_specific
+from resources.lib.news_window import Dialog_Example
 import resources.lib.search
 import resources.lib.sources
 import resources.lib.testings
@@ -54,11 +57,15 @@ home_folder = xbmc.translatePath('special://home/')
 addon_folder = os.path.join(home_folder, 'addons')
 art_path = os.path.join(addon_folder, addon_id)
 content_type = "files"
-
+ownAddon = xbmcaddon.Addon(id=addon_id)
+enable_installa = ownAddon.getSetting('dlimage')
+enable_newswin = ownAddon.getSetting('news_win')
 
 @route("main")
 def root():
     """root menu of the addon"""
+    if enable_newswin == 'true':
+        koding.Add_Dir(name='Latest News And Updates', url='{"my_text":"Latest News[CR]!!!","my_desc":""}', mode='dialog_example', folder=False, icon=os.path.join(art_path,'icon.png'), fanart=os.path.join(art_path,'fanart.jpg'))
     if not get_list(root_xml_url):
         koding.Add_Dir(
             name=_("Message"),
@@ -84,6 +91,8 @@ def root():
             icon=xbmcaddon.Addon().getAddonInfo("icon"),
             fanart=xbmcaddon.Addon().getAddonInfo("fanart"),
             content_type="")
+    if enable_installa =='true':
+        koding.Add_Dir(name='Download Backgrounds', url='{"my_text":"INSTALLA[CR]!!!","my_desc":""}', mode='dialog_specific', folder=False, icon=os.path.join(art_path,'icon.png'), fanart=os.path.join(art_path,'fanart.jpg'))
 
 
 @route(mode='get_list_uncached', args=["url"])
@@ -151,12 +160,21 @@ def settings():
 
 @route(mode="ScraperSettings")
 def scraper_settings():
-    xbmcaddon.Addon('script.module.nanscrapers').openSettings()
+    xbmcaddon.Addon('script.module.universalscrapers').openSettings()
 
 
 @route(mode="ResolverSettings")
 def resolver_settings():
-    xbmcaddon.Addon('script.module.urlresolver').openSettings()
+    xbmcaddon.Addon('script.module.resolveurl').openSettings()
+
+
+@route(mode="ClearTraktAccount")
+def clear_trakt_account():
+    import xbmcgui
+    if xbmcgui.Dialog().yesno(addon_name, "{0} Trakt {1}. {2}".format(_("Delete"), _("Settings").lower(), _("Are you sure?"))):
+        xbmcaddon.Addon().setSetting("TRAKT_EXPIRES_AT", "")
+        xbmcaddon.Addon().setSetting("TRAKT_ACCESS_TOKEN", "")
+        xbmcaddon.Addon().setSetting("TRAKT_REFRESH_TOKEN", "")
 
 
 @route(mode="message", args=["url"])
@@ -176,8 +194,8 @@ def clear_cache():
         koding.Remove_Table("meta")
         koding.Remove_Table("episode_meta")
     if dialog.yesno(addon_name, _("Clear Scraper Cache?")):
-        import nanscrapers
-        nanscrapers.clear_cache()
+        import universalscrapers
+        universalscrapers.clear_cache()
     if dialog.yesno(addon_name, _("Clear GIF Cache?")):
         dest_folder = os.path.join(
             xbmc.translatePath(xbmcaddon.Addon().getSetting("cache_folder")),

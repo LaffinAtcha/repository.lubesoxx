@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
     sources.py ---
-    Copyright (C) 2017, Midraal
+    Copyright (C) 2017, Jen
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
 """
 import random
 
-import nanscrapers
+import universalscrapers
 import requests
 import xbmcaddon
 import xbmcgui
@@ -27,6 +27,8 @@ import koding
 from koding import route
 import sys
 import xbmcplugin
+
+import resolveurl
 
 from resources.lib.util.xml import JenItem, JenList
 from resources.lib.util.messages import get_link_message, get_searching_message
@@ -91,7 +93,7 @@ class Sources(object):
         if ADDON.getSetting('use_link_dialog') == 'true' and not skip_selector:
             # use link selector
             if content == 'movie':
-                scraper = nanscrapers.scrape_movie_with_dialog
+                scraper = universalscrapers.scrape_movie_with_dialog
                 link, rest = scraper(
                     title,
                     year,
@@ -102,7 +104,7 @@ class Sources(object):
                     sort_function=Sources.sort_function,
                     enable_debrid=allow_debrid)
             elif content == "episode":
-                scraper = nanscrapers.scrape_episode_with_dialog
+                scraper = universalscrapers.scrape_episode_with_dialog
                 link, rest = scraper(
                     tvshowtitle,
                     year,
@@ -155,7 +157,8 @@ class Sources(object):
                             showbusy=False,
                             ignore_dp=True,
                             item=listitem,
-                            player=player)
+                            player=player,
+                            resolver=resolveurl)
                         link = links[0]
                         links = links[1:]
                     except:
@@ -167,11 +170,12 @@ class Sources(object):
                     showbusy=False,
                     ignore_dp=True,
                     item=listitem,
-                    player=player)
+                    player=player,
+                    resolver=resolveurl)
         else:
             if content == 'movie':
                 title = title
-                scraper = nanscrapers.scrape_movie
+                scraper = universalscrapers.scrape_movie
                 links_scraper = scraper(
                     title,
                     year,
@@ -184,7 +188,7 @@ class Sources(object):
                 if scraper_title:
                     tvshowtitle = title
                 tvshowtitle = tvshowtitle
-                scraper = nanscrapers.scrape_episode
+                scraper = universalscrapers.scrape_episode
                 links_scraper = scraper(
                     tvshowtitle,
                     year,
@@ -202,7 +206,7 @@ class Sources(object):
         sd_links = []
         non_direct_links = []
         non_direct_sd_links = []
-        num_scrapers = len(nanscrapers.relevant_scrapers())
+        num_scrapers = len(universalscrapers.relevant_scrapers())
         index = 0
         try:
             for scraper_links in links_scraper():
@@ -237,7 +241,8 @@ class Sources(object):
                                 showbusy=False,
                                 ignore_dp=True,
                                 item=listitem,
-                                player=player)
+                                player=player,
+                                resolver=resolveurl)
                             if result:
                                 return result
                         else:
@@ -251,7 +256,8 @@ class Sources(object):
                     showbusy=False,
                     ignore_dp=True,
                     item=listitem,
-                    player=player)
+                    player=player,
+                    resolver=resolveurl)
                 if result:
                     return result
 
@@ -265,7 +271,8 @@ class Sources(object):
                         showbusy=False,
                         ignore_dp=True,
                         item=listitem,
-                        player=player)
+                        player=player,
+                        resolver=resolveurl)
                     if result:
                         return result
                 else:
@@ -279,7 +286,8 @@ class Sources(object):
                     showbusy=False,
                     ignore_dp=True,
                     item=listitem,
-                    player=player)
+                    player=player,
+                    resolver=resolveurl)
                 if result:
                     return result
 
@@ -313,7 +321,7 @@ class Sources(object):
         title = title
         allow_debrid = ADDON.getSetting('allow_debrid') == "true"
         if ADDON.getSetting('use_link_dialog') == 'true' and not skip_selector:
-            link, rest = nanscrapers.scrape_song_with_dialog(
+            link, rest = universalscrapers.scrape_song_with_dialog(
                 title,
                 artist,
                 timeout=timeout,
@@ -356,7 +364,8 @@ class Sources(object):
                             showbusy=False,
                             ignore_dp=True,
                             item=listitem,
-                            player=player)
+                            player=player,
+                            resolver=resolveurl)
                         link = links[0]
                         links = links[1:]
                     except:
@@ -368,8 +377,9 @@ class Sources(object):
                     showbusy=False,
                     ignore_dp=True,
                     item=listitem,
-                    player=player)
-        links_scraper = nanscrapers.scrape_song(
+                    player=player,
+                    resolver=resolveurl)
+        links_scraper = universalscrapers.scrape_song(
             title,
             artist,
             timeout=timeout,
@@ -377,7 +387,7 @@ class Sources(object):
             enable_debrid=allow_debrid)
 
         sd_links = []
-        num_scrapers = len(nanscrapers.relevant_scrapers())
+        num_scrapers = len(universalscrapers.relevant_scrapers())
         index = 0
         try:
             for scraper_links in links_scraper():
@@ -411,7 +421,8 @@ class Sources(object):
                             showbusy=False,
                             ignore_dp=True,
                             item=listitem,
-                            player=player)
+                            player=player,
+                            resolver=resolveurl)
                         if result:
                             return result
 
@@ -423,7 +434,8 @@ class Sources(object):
                     showbusy=False,
                     ignore_dp=True,
                     item=listitem,
-                    player=player)
+                    player=player,
+                    resolver=resolveurl)
                 if result:
                     return result
         except:
@@ -762,7 +774,8 @@ def get_sources(item):
                     showbusy=False,
                     ignore_dp=True,
                     item=listitem,
-                    player=jenplayer)
+                    player=jenplayer,
+                    resolver=resolveurl)
         else:
             # who knows
             busy_dialog.close()
