@@ -133,3 +133,10 @@
 <fanart></fanart>
 </plugin>
 
+<item>
+    <title>visit x tv 18+ </title>
+    <link>http://stream.visit-x.tv:1935/vxtv/live_720p/playlist.m3u8</link>
+    <thumbnail></thumbnail>
+    <fanart><fanart>
+</item>
+
